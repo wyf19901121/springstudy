@@ -13,4 +13,16 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd
     <bean id="cuke" class="com.taobao.shuijin.springstudy.javabeanshow.Juggler">
     	<constructor-arg value="16" />
     </bean>
+    <bean id="soonet" class="com.taobao.shuijin.springstudy.javabeanshow.Sonnet29">
+    	<constructor-arg value="白日依山尽，黄河入海流" />
+    </bean>
+    <bean id="poeticDuke" class="com.taobao.shuijin.springstudy.javabeanshow.PoeticJuggler">
+    	<constructor-arg value="25" />
+    	<constructor-arg ref="soonet" />
+    </bean>
+    <bean id="ticket" class="com.taobao.shuijin.springstudy.javabeanshow.Ticket" scope="prototype">
+    </bean>
+    
+    <bean id="theStage" class="com.taobao.shuijin.springstudy.javabeanshow.Stage" factory-method="getInstance">
+    </bean>
 </beans>
